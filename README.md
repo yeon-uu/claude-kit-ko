@@ -57,9 +57,12 @@ Copy-Item .\templates\CLAUDE.global.md "$env:USERPROFILE\.claude\CLAUDE.md"   # 
 
 ## 크레딧
 
-이 키트는 아래 공개 스킬·프레임워크의 구조를 참고해 한국어 맥락으로 재작성했다:
-[blader/humanizer](https://github.com/blader/humanizer) · [obra/superpowers](https://github.com/obra/superpowers) · [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) · [Dammyjay93/interface-design](https://github.com/Dammyjay93/interface-design) · [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) · [jamditis/claude-skills-journalism](https://github.com/jamditis/claude-skills-journalism) · [daymade/claude-code-skills](https://github.com/daymade/claude-code-skills) · [Paramchoudhary/ResumeSkills](https://github.com/Paramchoudhary/ResumeSkills) · [santifer/career-ops](https://github.com/santifer/career-ops) · [varunr89/resume-tailoring-skill](https://github.com/varunr89/resume-tailoring-skill) · [jalaalrd/anti-ai-slop-writing](https://github.com/jalaalrd/anti-ai-slop-writing) · [Aboudjem/humanizer-skill](https://github.com/Aboudjem/humanizer-skill) · [bwerneckm/startup-skills](https://github.com/bwerneckm/startup-skills) · [Julia Evans — Brag Documents](https://jvns.ca/blog/brag-documents/)
+이 키트의 스킬은 15개 공개 프로젝트(전부 MIT/Apache-2.0)의 **방법·구조를 참고**해 한국어 맥락으로 **새로 작성**했다. 원문을 복제하지 않았고 저작권이 보호하지 않는 절차·체크리스트 개념만 차용했다. 출처별 라이선스와 참고 부분은 [CREDITS.md](CREDITS.md)에 표로 정리했다.
+
+## 면책
+
+이 프로젝트는 개인이 만든 비공식 키트로, **Anthropic의 공식 제품이 아니며 Anthropic과 제휴·후원 관계가 없다.** "Claude"는 Anthropic의 상표이며, 여기서는 Claude Code와의 호환성을 설명하기 위해 지시적으로만 사용한다.
 
 ## 라이선스
 
-MIT
+MIT — [LICENSE](LICENSE) 참고. 본인 저작물이 부적절하게 반영됐다고 판단하는 저자는 이슈로 알려주면 즉시 반영한다.
