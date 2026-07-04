@@ -20,7 +20,7 @@
 
 1. Claude Code 설치: `npm install -g @anthropic-ai/claude-code` (또는 데스크톱 앱) → 로그인.
 2. 전역 지침: `templates/CLAUDE.global.md` → `~/.claude/CLAUDE.md` 복사 후 `<>` 항목 채우기.
-3. 스킬: `skills/` 아래 8개 폴더 → `~/.claude/skills/` 복사.
+3. 스킬: `skills/` 아래 9개 폴더 → `~/.claude/skills/` 복사.
 4. 표준: `standards/` → `<dev 루트>/_standards/` 복사.
 5. 커리어 허브: `templates/career-hub/` → `<dev 루트>/_career/` 복사. **_career는 절대 공개 레포에 올리지 말 것** (면접용 원본·지원 이력 포함).
 6. 검증: 아무 폴더에서 `claude` 실행 → "글 다듬어줘"라고 해보면 write-human이 잡히는지 확인.
@@ -47,7 +47,7 @@ Copy-Item -Recurse .\templates\career-hub "D:\dev\_career"
 
 프로젝트 CLAUDE.md에 "한국어로 소통" 같은 사용자 선호를 쓰지 말 것 — 전역에 이미 있다.
 
-## 4. 스킬 8개 — 용도와 모델 전략
+## 4. 스킬 9개 — 용도와 모델 전략
 
 | 스킬 | 언제 발동 | 모델 힌트 |
 |---|---|---|
@@ -59,6 +59,7 @@ Copy-Item -Recurse .\templates\career-hub "D:\dev\_career"
 | experience-block | 마일스톤 도달 시 경험 기록 | 모델 무관 |
 | jd-fit | 채용공고 분석·갭 계획 | 갭 채움 제안은 Opus+ 권장 |
 | sprint-plan | 일정·스프린트·역할분배 (마감 역산) | 분배·기간 추정은 Opus+ 권장 |
+| interview-prep | 면접 예상질문 3종 + 질문은행 회고 | 팩트형 모범답은 Opus+ 권장 |
 
 설계 철학: 스킬은 판단 위임이 아니라 **고정 절차·표·체크리스트**다. 그래서 Sonnet이 작업해도 품질이 유지된다. 권장 모델 배분 — 설계·감사·최종 퇴고는 Opus급, 체크리스트 기반 구현·반복 작업은 Sonnet, 파일 정리·포맷 변환은 Haiku.
 
