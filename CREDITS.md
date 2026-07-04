@@ -2,7 +2,7 @@
 
 이 키트의 스킬은 아래 공개 프로젝트들의 **방법·구조를 참고**해 한국어 맥락으로 **새로 작성**한 것이다. 원문 텍스트를 복제하지 않았고, 저작권이 보호하지 않는 절차·체크리스트·포맷 개념만 차용했다. 그럼에도 출처 표기와 감사를 위해 전부 명시한다.
 
-확인일: 2026-07-03. 라이선스는 각 리포에서 직접 확인했다.
+확인일: 2026-07-03~04. 라이선스는 각 리포에서 직접 확인했다.
 
 | 출처 | 라이선스 | 이 키트에서 참고한 부분 |
 |---|---|---|
@@ -10,7 +10,9 @@
 | [jalaalrd/anti-ai-slop-writing](https://github.com/jalaalrd/anti-ai-slop-writing) | MIT | write-human — burstiness(문장 길이 변주), 실수치·마찰 서술 |
 | [Aboudjem/humanizer-skill](https://github.com/Aboudjem/humanizer-skill) | MIT | write-human — 반복 수렴 재작성, 감각적 디테일 원칙 |
 | [obra/superpowers](https://github.com/obra/superpowers) | MIT | idea-shaping, arch-budget — 한 번에 한 질문·승인 게이트, 대안 2~3개 강제 |
-| [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | Apache-2.0 | idea-shaping, arch-budget — Diverge→Provoke→Converge, 제약 선언·평가 매트릭스 |
+| [anthropics/knowledge-work-plugins](https://github.com/anthropics/knowledge-work-plugins) | Apache-2.0 | idea-shaping, arch-budget, sprint-plan — Diverge→Provoke→Converge, 제약 선언·평가 매트릭스, 70~80% 용량·P0/P1/P2 |
+| [phuryn/pm-skills](https://github.com/phuryn/pm-skills) | MIT | sprint-plan — Definition of Ready, 임계 경로, 단일담당 리스크, 리스크-완화책 페어 |
+| [OthmanAdi/planning-with-files](https://github.com/OthmanAdi/planning-with-files) | MIT | sprint-plan — 솔로 모드 검증 게이트, 같은 실패 3회 반복 금지 |
 | [bwerneckm/startup-skills](https://github.com/bwerneckm/startup-skills) | MIT | idea-shaping — 사전 필터 점수제, RAT 2×2, GO/PIVOT/KILL 판정 |
 | [affaan-m/ECC](https://github.com/affaan-m/everything-claude-code) | MIT | arch-budget — ADR 필드 구조(업계 표준 ADR 패턴 기반) |
 | [Dammyjay93/interface-design](https://github.com/Dammyjay93/interface-design) | MIT | design-layout — 토큰 파일 고정으로 드리프트 방지하는 구조 |
