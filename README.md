@@ -1,5 +1,7 @@
 # claude-kit-ko
 
+[![CI](https://github.com/yeon-uu/claude-kit-ko/actions/workflows/ci.yml/badge.svg)](https://github.com/yeon-uu/claude-kit-ko/actions/workflows/ci.yml)
+
 **한국어 사용자를 위한 Claude Code 스킬 + 프로젝트 표준 키트.**
 AI 티 안 나는 한국어 글쓰기, 자원 제약 아키텍처 설계, 출처 규율, 공모전 아이디어 검증, 스프린트·역할분배, 경험블록→JD 매칭→면접 대비까지 잇는 취준 파이프라인 — 바로 복사해서 쓰는 9개 스킬과 문서 표준.
 
