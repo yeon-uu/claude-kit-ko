@@ -18,6 +18,9 @@ AI 티 안 나는 한국어 글쓰기, 자원 제약 아키텍처 설계, 출처
 skills/        ← ~/.claude/skills/ 에 복사하는 9개 스킬
 standards/     ← 프로젝트 문서 표준 4종 (dev 루트 _standards/ 로)
 templates/     ← 전역 CLAUDE.md 템플릿 + 커리어 허브 골격
+kit/           ← 설치·검증 CLI (표준 라이브러리만, `python -m kit`)
+tests/         ← CLI 테스트 (pytest, 12개)
+examples/      ← 실제 lint 출력·write-human before/after 갤러리
 SETUP.md       ← 설치·계층 원칙·모델 전략·새 PC 이전 가이드
 ```
 
@@ -48,6 +51,19 @@ cd claude-kit-ko
 Copy-Item -Recurse .\skills\* "$env:USERPROFILE\.claude\skills\"
 Copy-Item .\templates\CLAUDE.global.md "$env:USERPROFILE\.claude\CLAUDE.md"   # <> 채우기
 ```
+복사가 번거로우면 CLI로 설치·검증한다:
+
+```bash
+python -m kit install     # skills/ → ~/.claude/skills/ (기존 CLAUDE.md는 덮지 않음)
+python -m kit doctor      # 설치 상태·lint 요약
+python -m kit lint        # SKILL.md frontmatter 규약 검증 (CI에 걸기 좋음)
+python -m kit list        # 스킬 목록·요약
+```
+
+`kit`은 스킬 뭉치를 도구로 묶는다 — `lint`는 name↔디렉터리 불일치, description 길이,
+frontmatter 손상(BOM 포함)을 잡는다(실제로 잡은 사례: [examples/](examples/README.md)).
+외부 의존성 없이 표준 라이브러리만 쓰고, `python -m pytest -q`로 12개 테스트가 돈다.
+
 나머지(표준 문서, 커리어 허브, 계층 원칙)는 [SETUP.md](SETUP.md).
 
 ## 사용법 — 이렇게 말하면 됩니다
@@ -76,6 +92,17 @@ Copy-Item .\templates\CLAUDE.global.md "$env:USERPROFILE\.claude\CLAUDE.md"   # 
 2. **계층 중복 금지** — 전역 CLAUDE.md(항상 로드) / 스킬(호출 시) / 표준(참조 시) / 프로젝트 CLAUDE.md(1페이지)의 역할을 나눠 토큰을 아낀다.
 3. **냉정 우선** — 응원 대신 약점 먼저. idea-shaping에는 KILL 판정이, jd-fit에는 "지원 비추천" 밴드가 내장돼 있다.
 4. **수치는 출처와 함께** — [측정]/[추정]/[내부] 플래그 없는 숫자는 쓰지 않는다.
+
+## 새로 만든 것 vs 차용한 것
+
+영어권 스킬에서 가져온 건 **절차의 뼈대**뿐이다(Draft→Audit→Revise, 대안 강제 비교, 요구사항↔증거 매핑 같은, 저작권이 보호하지 않는 방법론). 아래는 그 뼈대에 붙인, 이 키트가 새로 만든 부분이다.
+
+- **한국어 AI 티 체크리스트 16개** — em dash·"delve" 같은 영어 표층 규칙은 버렸다. 어미 3연속, 번역투("~를 통해"), 만연체, 포부형 마무리 등 한국어에서 실제로 티 나는 패턴만 남겼다.
+- **한국 1차 출처 계층** — research-cited의 출처 등급에 KOSIS·공공데이터포털·국가법령정보센터를 최상위로 넣었다.
+- **공모전 트랙** — idea-shaping·sprint-plan에 심사기준 배점 역산, 역대 수상작 차별화 검증, 안전마감 버퍼를 넣었다. 영어권 스타트업 스킬엔 없는 맥락이다.
+- **다대다 면접 규칙 + 질문은행 루프** — 30초/60초 이원화, 면접 후 실제 기출을 은행에 쌓아 다음 대비 1순위로 승격시키는 회고 모드.
+- **계층 아키텍처** — 전역/스킬/표준/프로젝트 4층으로 지침을 나눠 토큰을 아끼는 구조. 각 층의 역할과 이전 원칙을 [SETUP.md](SETUP.md)에 규정했다.
+- **`kit` CLI** — lint/install/doctor. 스킬 뭉치를 검증 가능한 도구로 만든 순수 오리지널 코드다. 실제로 BOM 혼입 결함을 잡았다([examples/](examples/README.md)).
 
 ## 크레딧
 
